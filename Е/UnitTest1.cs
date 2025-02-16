@@ -30,6 +30,6 @@ public class WeatherControllerTests
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result);
-        Assert.Equal("   ", okResult.Value);
+        Assert.Equal("    ", okResult.Value);
     }
 }
