@@ -20,7 +20,7 @@ public class WeatherControllerTests
     {
         // Arrange
         string city = "Kyiv";
-        string expectedWeather = $"Sunny in {city}";
+        string expectedWeather = $"Sunny in Kyi v";
         _weatherServiceMock
             .Setup(service => service.GetWeatherAsync(city))
             .ReturnsAsync(expectedWeather);
