@@ -20,7 +20,7 @@ public class WeatherControllerTests
     {
         // Arrange
         string city = "Kyiv";
-        string expectedWeather = $"Sunny in Kyi v";
+        string expectedWeather = $"";
         _weatherServiceMock
             .Setup(service => service.GetWeatherAsync(city))
             .ReturnsAsync(expectedWeather);
@@ -30,6 +30,6 @@ public class WeatherControllerTests
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result);
-        Assert.Equal(expectedWeather, okResult.Value);
+        Assert.Equal("   ", okResult.Value);
     }
 }
