@@ -34,6 +34,7 @@ jobs:
       # Крок 5: Запуск тестів
       - name: Run tests
         run: |
+          dotnet build --configuration Release  # Додаємо явне побудування
           dotnet test --configuration Release --no-build --verbosity normal
         continue-on-error: false  # Зупинити дію при помилці тестів
 
